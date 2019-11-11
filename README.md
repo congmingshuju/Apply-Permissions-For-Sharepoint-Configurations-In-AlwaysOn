@@ -19,12 +19,13 @@
 
 ## 中文
 假设你有一个全新的SQL AlwaysOn环境用于SQL 2012或SQL 2014，现在Sharepoint管理员正在连接到监听器名称，进行安装和配置Sharepoint。每次尝试创建数据库时，Sharepoint配置过程可能会遇到一些权限错误。所以，你作为“DBA”应当确保为Sharepoint管理员帐户在群集中的每个Node上设置了所有可用权限，在此示例中为MyDomainMySharepointAccount。这时候它已被设置为OS和SQL Server的系统管理员，并且已添加到数据库所有者权限中。
-(Basically it’s been added to Master dbo, and the local administrators group on the Server it’s self, and it’s already added to the Sysadmin role under each SQL Server instance.)
-（基本上它已被添加到Master dbo，以及它自己的服务器上的本地管理员组，并且它已经添加到每个SQL Server instance下的Sysadmin角色中。）
 
+（基本上它已被添加到Master dbo，以及它自己的服务器上的本地管理员组，并且它已经添加到每个SQL Server instance下的Sysadmin角色中。）
 
 ## English
 Lets say you have a brand new SQL AlwaysOn environment for SQL 2012 or SQL 2014 and now the Sharepoint Admins are connecting to the Listener name so they can install and configure Sharepoint. The Sharepoint configuration process may run into a few permissions errors whenever they try to create their databases. So you ‘the DBA’ will check to ensure that all the appropriate permissions are set on each Node in the Cluster for the Sharepoint Administrator account which in this example is MyDomainMySharepointAccount. You notice that it’s set as the Sysadmin for both the OS and SQL Server and has already been added to the database owner permissions.
+
+(Basically it’s been added to Master dbo, and the local administrators group on the Server it’s self, and it’s already added to the Sysadmin role under each SQL Server instance.)
 
 
 然而,你仍然会在Sharepoint配置过程的“指定配置数据库设置”下遇到问题。他们看到了这个错误：
